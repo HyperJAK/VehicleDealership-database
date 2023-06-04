@@ -1,0 +1,25 @@
+select manufacturer 
+from car_db_metric.car_db
+where nbDoors = 2
+or nbDoors = 4
+and nbDoors <> 0
+group by manufacturer
+order by manufacturer;
+
+select model 
+from car_db
+where manufacturer = "bmw"
+and nbDoors = 2
+or nbDoors = 4
+and nbDoors <> 0
+group by model
+order by model;
+
+select categorie
+from car_db
+where manufacturer = "bmw"
+and nbDoors = 2
+or nbDoors = 4
+and nbDoors <> 0
+group by categorie
+order by categorie;
